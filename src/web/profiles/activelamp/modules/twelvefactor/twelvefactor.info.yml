@@ -1,0 +1,5 @@
+name: Twelve-factor Demo Module
+type: module
+description: This module does absolutely nothing.
+core: 8.x
+package: ActiveLAMP

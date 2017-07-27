@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  php:
+    volumes:
+      - drupal-sync:/var/www/html/profiles:nocopy
+
+volumes:
+  drupal-sync:
+    external: true
