@@ -4,7 +4,10 @@ services:
 
   php:
     volumes:
-      - drupal-sync:/var/www/html/profiles:nocopy
+      - drupal-sync:/var/www:nocopy
+  nginx:
+    volumes:
+      - drupal-sync:/var/www:nocopy
 
 volumes:
   drupal-sync:

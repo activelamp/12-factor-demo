@@ -4,7 +4,7 @@ options:
 syncs:
 
   drupal-sync:
-    src: './src/web/profiles'
+    src: './src'
     sync_host_ip: 'auto'
     sync_userid: 33
     sync_strategy: 'native_osx'

@@ -4,7 +4,7 @@ SHELL := /usr/bin/env bash
 ## Stack Commands ##
 ####################
 
-setup: bundle-install pull-images pull-dependencies
+setup: bundle-install pull-images
 
 setup-build: rebuild pull-dependencies
 
@@ -31,7 +31,7 @@ pull-images:
 push-images:
 	docker-compose push
 
-pull-dependencies:
+pull-dependencies: pull-dependencies-drupal
 
 build:
 	docker-compose build
