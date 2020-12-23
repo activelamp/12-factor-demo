@@ -33,7 +33,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 Pulling down the clone:
                           git clone https://github.com/RightsandWrongsgit/12-factor-demo.git
 
-      NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.  
+      __NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.__  
 
 The file to first take a look at in the GitHub repository is that “Makefile” .  Basically you need to think about it as the file that you are going to run to invoke the
 installation of everything else.  You can see commands in it that do typical things like Pull and Push images, invoke Docker to install and build, and grab files like the
