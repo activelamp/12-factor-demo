@@ -26,12 +26,14 @@ way to work with Docker "Manage Docker Easily With VS Code" (https://www.youtube
 We will also see if we might integrate a Portainer capability in this repository at a later date (https://www.youtube.com/watch?v=d_yCqZIui80).  But back to Git, for a good 
 reminder of basics consider "A Git Cheatsheet of Commands You Might Need Daily" (https://medium.com/swlh/git-ready-a-git-cheatsheet-of-commands-you-might-need-daily-8f4bfb7b79cf).
 Plus, when your best approach is to take down the containers, clean the old local project install and start over, consider "Everyday Git: Clean up and start over" 
-(https://everydayrails.com/2014/02/27/git-reset-clean.html).  If you really want a fairly deep GIT/GITHUB training overview to include using branches and forking, there is about an hour and ten minute video worth watching called "Git and GitHub for Beginners - Crash Course" (https://www.youtube.com/watch?v=RGOj5yH7evk).
+(https://everydayrails.com/2014/02/27/git-reset-clean.html).  If you really want a fairly deep GIT/GITHUB training overview to include setting up your SSH connection for updating
+between local and GitHub, using branches and forking, there is about an hour and ten minute video worth watching called "Git and GitHub for Beginners - Crash Course"
+(https://www.youtube.com/watch?v=RGOj5yH7evk).
 
 Pulling down the clone:
                           git clone https://github.com/RightsandWrongsgit/12-factor-demo.git
 
-     **  NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to you own fork’s clone address.  **
+      NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to you own fork’s clone address.  
 
 The file to first take a look at in the GitHub repository is that “Makefile” .  Basically you need to think about it as the file that you are going to run to invoke the
 installation of everything else.  You can see commands in it that do typical things like Pull and Push images, invoke Docker to install and build, and grab files like the
