@@ -105,3 +105,6 @@ from this Drupal template for to make sure we are clean (https://github.com/drup
 Add - cross check the original Active/Lamp approach to the Drush installation to make sure it is updated to the latest Drush version.  And in the process cross check
 this repository on good Drush with Drupal practices (https://stackoverflow.com/questions/35743801/how-to-use-docker-with-drupal-and-drush).
 
+Add - Review of the "Tools" to include in the Development version of a Dockerfile to add to DockerHub registry that can then be pulled by the common Docker-Compose.yml
+file that cuts around all workflow stages.  For the tool set in Development (https://github.com/glaux/drupal8docker/commit/59b9821b0db96ad007e443ccf79fae8f2154dbe3).
+
