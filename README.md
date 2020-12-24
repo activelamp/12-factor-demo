@@ -100,7 +100,8 @@ detail.  And don't forget to include the "Secrets" approach to protecting creden
 Add - inclusion of and discussion of detailed workflow value of using the .env approach to environment management.  See if the environment can be fully common between the 
 Development, Staging-Testing, and Production elements of each supported site in a multi-site but simply use DockerHub registry held version of each workflow element with 
 appropriate Dockerfile versions for each.  (https://gitlab.com/florenttorregrosa-drupal/docker-drupal-project/-/blob/8.x/example.dev.env).  Review the example .env file
-from this Drupal template for to make sure we are clean (https://github.com/drupal-composer/drupal-project/commit/2d48c40ad9a8187f12fda5ee74d1830f1d0086b4).
+from this Drupal template for to make sure we are clean (https://github.com/drupal-composer/drupal-project/commit/2d48c40ad9a8187f12fda5ee74d1830f1d0086b4).  It will also
+pay dividends to cross check best practices here (https://github.com/vlucas/phpdotenv).
 
 Add - cross check the original Active/Lamp approach to the Drush installation to make sure it is updated to the latest Drush version.  And in the process cross check
 this repository on good Drush with Drupal practices (https://stackoverflow.com/questions/35743801/how-to-use-docker-with-drupal-and-drush).
