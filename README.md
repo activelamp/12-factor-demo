@@ -83,3 +83,15 @@ To make it easy by leveraging someone else’s good thinking, you can do a searc
 GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
 
 TO BE CONTINUED
+
+Add - The expansion of directory structure for backup copies of database files and multi-site workflow managed sites.  Make sure to include modifications of the .gitignore
+file but with placeholder non-ignored files in the directories to hold the tree structure.     Per "Dockerize an Existing Project"   (https://drupalize.me/tutorial/dockerize-existing-project?p=3040).
+
+Add - Discussion of a couple hosting option alternatives.   The overview that shows how you put more into your Docker-compose and/or Dockerfile project definitions that later
+if its content around 16 minute in includes one realatively generic hosting option "Putting it All Together - Docker, Docker-Compose, NGinx Proxy Manager, and Domain
+Routing - How To." (https://www.youtube.com/watch?v=cjJVmAI1Do4).  But also offer the deeper support option of Lagoon with Amazee.io hosting as discussed in "How to manage
+Multiple Drupal sites with Lagoon" (https://www.youtube.com/watch?v=R2tIivVvExQ&feature=emb_rel_end) | May want to work directly with Amazee staff on final coordination after
+providing them with the basic structure and logic from the other elements in this repo. |  One key element to reconcile is that the multi-site logic of the Logoon approach
+discussed in this video takes precedence over the multi-site aspect of the "Dockerize an Existin Project" directory layout; but NOT over the database backup aspects.  And, make
+sure a user discussion of the benefits over classic drupal multi-site config approach is provided in summary so they only have to watch the Lagoon video if they want super
+detail.  And don't forget to include the "Secrets" approach to protecting credentials in corrdination with the gitignore specifications. 
