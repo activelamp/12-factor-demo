@@ -102,3 +102,6 @@ Development, Staging-Testing, and Production elements of each supported site in 
 appropriate Dockerfile versions for each.  (https://gitlab.com/florenttorregrosa-drupal/docker-drupal-project/-/blob/8.x/example.dev.env).  Review the example .env file
 from this Drupal template for to make sure we are clean (https://github.com/drupal-composer/drupal-project/commit/2d48c40ad9a8187f12fda5ee74d1830f1d0086b4).
 
+Add - cross check the original Active/Lamp approach to the Drush installation to make sure it is updated to the latest Drush version.  And in the process cross check
+this repository on good Drush with Drupal practices (https://stackoverflow.com/questions/35743801/how-to-use-docker-with-drupal-and-drush).
+
