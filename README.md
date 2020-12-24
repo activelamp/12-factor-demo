@@ -106,5 +106,9 @@ Add - cross check the original Active/Lamp approach to the Drush installation to
 this repository on good Drush with Drupal practices (https://stackoverflow.com/questions/35743801/how-to-use-docker-with-drupal-and-drush).
 
 Add - Review of the "Tools" to include in the Development version of a Dockerfile to add to DockerHub registry that can then be pulled by the common Docker-Compose.yml
-file that cuts around all workflow stages.  For the tool set in Development (https://github.com/glaux/drupal8docker/commit/59b9821b0db96ad007e443ccf79fae8f2154dbe3).
+file that cuts around all workflow stages.  For the tool set in Development (https://github.com/glaux/drupal8docker/commit/59b9821b0db96ad007e443ccf79fae8f2154dbe3). Then
+to get the Docker-compose.yml file and the Dockerfile to work with one another and share the same network consider the design logic discussed here 
+(https://stackoverflow.com/questions/29480099/whats-the-difference-between-docker-compose-vs-dockerfile#:~:text=The%20answer%20is%20neither.,to%20your%20project%27s%20docker-compose.&text=Your%20Docker%20workflow%20should%20be,images%20using%20the%20build%20command.).
+
+
 
