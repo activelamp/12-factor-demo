@@ -130,3 +130,12 @@ approach (https://docs.docker.com/develop/develop-images/dockerfile_best-practic
 Consider Adding - A discussion of options for customization of Drupal Scaffolding beyond that of an automatic install
 (https://github.com/drupal/core-composer-scaffold/tree/8.9.x).
 
+Add - A SUPERNOVICE appendix explaining 'shells', their varieties, and their relationship to different operating systems.  Then provide links to sources that show how you
+can modify your command line via something like editing your BASH files and how that is beneficial in 'knowing where you are' on local directories and GitHub.
+
+Add - An overview of various approaches to Backups for your application and database.  Using linked sources but relating them in the discussion to the modification made to
+the directory structure for local backups to be brought down and used as well.
+
+Add - At least a discussion of MAKE and possibly scripting generally with emphasis on MAKE.  Do this when considering automation of the workflow Docker-compose.yml and 
+Dockerfile versions to be put on DockerHub registry.
+
