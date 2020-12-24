@@ -84,6 +84,16 @@ GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
 
 TO BE CONTINUED
 
+Add - the key next thing to put in documentation is how you remove the docker-compose.yml installed .src directory and below, replacing it with an empty .src directory 
+in which you run the correct version of (https://github.com/drupal-composer/drupal-project/tree/8.x).  It is likely that this current repository should edit a branch and
+merge it back to MASTER with that step done.  And that a copy of the Drupal install to put in it should be forked from the original to be stored as an addtional 
+companion new repository in RightsandWrongsgit; but it should be edited to specifically make the install into the .src directory replacing the 'some-directory' statement
+in the orginal before forking.  But this should be outlined in the documentation is fair detail so if these RightandWrong repositories get dated a user can do this update
+themselves.  It appears the Drupal-composer/drupal-project repository is very actively managed so users can get the most current versions.  But make sure to include a
+good discussion of what might be implied for 'major versions' and for key support like Composer, Drush, and PHP version continuity checks they should make.
+
+
+
 Add - The expansion of directory structure for backup copies of database files and multi-site workflow managed sites.  Make sure to include modifications of the .gitignore
 file but with placeholder non-ignored files in the directories to hold the tree structure.     Per "Dockerize an Existing Project"   (https://drupalize.me/tutorial/dockerize-existing-project?p=3040).  See if there is any reason NOT to use the .gitkeep file name for the non-ignored files like this repository does
 (https://github.com/Drupal-FR/site-drupalfr/tree/8.x-1.x/backups).
@@ -101,7 +111,9 @@ Add - inclusion of and discussion of detailed workflow value of using the .env a
 Development, Staging-Testing, and Production elements of each supported site in a multi-site but simply use DockerHub registry held version of each workflow element with 
 appropriate Dockerfile versions for each.  (https://gitlab.com/florenttorregrosa-drupal/docker-drupal-project/-/blob/8.x/example.dev.env).  Review the example .env file
 from this Drupal template for to make sure we are clean (https://github.com/drupal-composer/drupal-project/commit/2d48c40ad9a8187f12fda5ee74d1830f1d0086b4).  It will also
-pay dividends to cross check best practices here (https://github.com/vlucas/phpdotenv).
+pay dividends to cross check best practices here (https://github.com/vlucas/phpdotenv). And, make sure this is coordinated with the credentials approach as noted here for
+'autoload' (https://stackoverflow.com/questions/30881596/php-dotenv-unable-to-load-env-vars) remembering that the ActiveLamp starting point is working the autoload in the
+vendor subdirectory 
 
 Add - cross check the original Active/Lamp approach to the Drush installation to make sure it is updated to the latest Drush version.  And in the process cross check
 this repository on good Drush with Drupal practices (https://stackoverflow.com/questions/35743801/how-to-use-docker-with-drupal-and-drush).
@@ -111,5 +123,10 @@ file that cuts around all workflow stages.  For the tool set in Development (htt
 to get the Docker-compose.yml file and the Dockerfile to work with one another and share the same network consider the design logic discussed here 
 (https://stackoverflow.com/questions/29480099/whats-the-difference-between-docker-compose-vs-dockerfile#:~:text=The%20answer%20is%20neither.,to%20your%20project%27s%20docker-compose.&text=Your%20Docker%20workflow%20should%20be,images%20using%20the%20build%20command.).
 
+Consider Adding - A discussion of Path management so people who have any install hangups know where to look and what to tweak on their systems
+(https://stackoverflow.com/questions/36577020/php-failed-to-open-stream-no-such-file-or-directory).  Include the Docker best practices for path management in the ENV 
+approach (https://docs.docker.com/develop/develop-images/dockerfile_best-practices/).
 
+Consider Adding - A discussion of options for customization of Drupal Scaffolding beyond that of an automatic install
+(https://github.com/drupal/core-composer-scaffold/tree/8.9.x).
 
