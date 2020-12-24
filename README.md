@@ -85,7 +85,8 @@ GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
 TO BE CONTINUED
 
 Add - The expansion of directory structure for backup copies of database files and multi-site workflow managed sites.  Make sure to include modifications of the .gitignore
-file but with placeholder non-ignored files in the directories to hold the tree structure.     Per "Dockerize an Existing Project"   (https://drupalize.me/tutorial/dockerize-existing-project?p=3040).
+file but with placeholder non-ignored files in the directories to hold the tree structure.     Per "Dockerize an Existing Project"   (https://drupalize.me/tutorial/dockerize-existing-project?p=3040).  See if there is any reason NOT to use the .gitkeep file name for the non-ignored files like this repository does
+(https://github.com/Drupal-FR/site-drupalfr/tree/8.x-1.x/backups).
 
 Add - Discussion of a couple hosting option alternatives.   The overview that shows how you put more into your Docker-compose and/or Dockerfile project definitions that later
 if its content around 16 minute in includes one realatively generic hosting option "Putting it All Together - Docker, Docker-Compose, NGinx Proxy Manager, and Domain
