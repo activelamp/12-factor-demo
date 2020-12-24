@@ -99,5 +99,6 @@ detail.  And don't forget to include the "Secrets" approach to protecting creden
 
 Add - inclusion of and discussion of detailed workflow value of using the .env approach to environment management.  See if the environment can be fully common between the 
 Development, Staging-Testing, and Production elements of each supported site in a multi-site but simply use DockerHub registry held version of each workflow element with 
-appropriate Dockerfile versions for each.  (https://gitlab.com/florenttorregrosa-drupal/docker-drupal-project/-/blob/8.x/example.dev.env).
+appropriate Dockerfile versions for each.  (https://gitlab.com/florenttorregrosa-drupal/docker-drupal-project/-/blob/8.x/example.dev.env).  Review the example .env file
+from this Drupal template for to make sure we are clean (https://github.com/drupal-composer/drupal-project/commit/2d48c40ad9a8187f12fda5ee74d1830f1d0086b4).
 
