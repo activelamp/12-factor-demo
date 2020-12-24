@@ -95,3 +95,8 @@ providing them with the basic structure and logic from the other elements in thi
 discussed in this video takes precedence over the multi-site aspect of the "Dockerize an Existin Project" directory layout; but NOT over the database backup aspects.  And, make
 sure a user discussion of the benefits over classic drupal multi-site config approach is provided in summary so they only have to watch the Lagoon video if they want super
 detail.  And don't forget to include the "Secrets" approach to protecting credentials in corrdination with the gitignore specifications. 
+
+Add - inclusion of and discussion of detailed workflow value of using the .env approach to environment management.  See if the environment can be fully common between the 
+Development, Staging-Testing, and Production elements of each supported site in a multi-site but simply use DockerHub registry held version of each workflow element with 
+appropriate Dockerfile versions for each.  (https://gitlab.com/florenttorregrosa-drupal/docker-drupal-project/-/blob/8.x/example.dev.env).
+
