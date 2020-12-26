@@ -30,11 +30,21 @@ Plus, when your best approach is to take down the containers, clean the old loca
 between local and GitHub, using branches and forking, there is about an hour and ten minute video worth watching called "Git and GitHub for Beginners - Crash Course"
 (https://www.youtube.com/watch?v=RGOj5yH7evk).
 
+# QUICK START
 Pulling down the clone:
                           git clone https://github.com/RightsandWrongsgit/12-factor-demo.git
 
       __NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.__  
 
+Change into the working directory:  cd 12-factor-demo
+
+Run:  Make Setup
+
+Run: Make Start
+
+Go to your Browser address bar type and hit enter:  localhost:7080
+
+--------------------------------------------------------------
 The file to first take a look at in the GitHub repository is that “Makefile” .  Basically you need to think about it as the file that you are going to run to invoke the
 installation of everything else.  You can see commands in it that do typical things like Pull and Push images, invoke Docker to install and build, and grab files like the
 docker-composer.yml and docker-compose.dev.yml that define the environment.  But the most interesting syntax is the call to docker.sync; a function that basically is the
