@@ -36,7 +36,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 
  *NOTE: this example syntax is NOT from a ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.  
 
-2) Change into the working directory:    `cd 12-factor-demo`
+2) Now local, change into the working directory of what you cloned:    `cd 12-factor-demo`
 
 3) Run:    `Make Setup`
 
