@@ -44,7 +44,8 @@ Run: Make Start
 
 Go to your Browser address bar type and hit enter:  localhost:7080
 
-Open VSCode and click the 'Source Control' icon where you will initialize your local Git repository (Or do it in your own favorite Git/IDE environment)
+Open VSCode and click the 'Source Control' icon where you will initialize your local Git repository
+(Or do it in your own favorite Git/IDE environment)
 
 --------------------------------------------------------------
 # WHAT'S GOING ON & ADDTIONAL STEPS TO TAKE THINGS FURTHER
