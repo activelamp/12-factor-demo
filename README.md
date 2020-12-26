@@ -34,11 +34,11 @@ between local and GitHub, using branches and forking, there is about an hour and
 Pulling down the clone:
                               git clone https://github.com/RightsandWrongsgit/12-factor-demo.git
 
-      __NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.__  
+      `NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.`  
 
 Change into the working directory:    cd 12-factor-demo
 
-Run:    Make Setup
+Run:    `Make Setup`
 
 Run:    Make Start
 
