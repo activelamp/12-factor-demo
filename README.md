@@ -34,7 +34,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 1) Pulling down the clone:
                               `git clone https://github.com/RightsandWrongsgit/12-factor-demo.git`
 
-* * NOTE: this example syntax is NOT from a ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.  
+* *NOTE: this example syntax is NOT from a ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.  
 
 2) Change into the working directory:    `cd 12-factor-demo`
 
