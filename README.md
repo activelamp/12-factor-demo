@@ -45,6 +45,7 @@ Run: Make Start
 Go to your Browser address bar type and hit enter:  localhost:7080
 
 --------------------------------------------------------------
+# WHAT'S GOING ON & ADDTIONAL STEPS TO TAKE THINGS FURTHER
 The file to first take a look at in the GitHub repository is that “Makefile” .  Basically you need to think about it as the file that you are going to run to invoke the
 installation of everything else.  You can see commands in it that do typical things like Pull and Push images, invoke Docker to install and build, and grab files like the
 docker-composer.yml and docker-compose.dev.yml that define the environment.  But the most interesting syntax is the call to docker.sync; a function that basically is the
