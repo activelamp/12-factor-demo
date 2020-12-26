@@ -44,9 +44,7 @@ Run: Make Start
 
 Go to your Browser address bar type and hit enter:  localhost:7080
 
-Open VSCode and click the 'Source Control' icon where you will initialize your local Git repository
-(Or do it in your own favorite Git/IDE environment)
-
+Open Visual Studio Code and click the 'Source Control' icon where you will initialize your local Git repository (Or do it in your own favorite Git/IDE environment)
 --------------------------------------------------------------
 # WHAT'S GOING ON & ADDTIONAL STEPS TO TAKE THINGS FURTHER
 The file to first take a look at in the GitHub repository is that “Makefile” .  Basically you need to think about it as the file that you are going to run to invoke the
