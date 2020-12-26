@@ -32,17 +32,17 @@ between local and GitHub, using branches and forking, there is about an hour and
 
 # QUICK START
 Pulling down the clone:
-                          git clone https://github.com/RightsandWrongsgit/12-factor-demo.git
+                              git clone https://github.com/RightsandWrongsgit/12-factor-demo.git
 
       __NOTE: this example syntax is NOT from the ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.__  
 
-Change into the working directory:  cd 12-factor-demo
+Change into the working directory:      cd 12-factor-demo
 
-Run:  Make Setup
+Run:      Make Setup
 
-Run: Make Start
+Run:     Make Start
 
-Go to your Browser address bar type and hit enter:  localhost:7080
+Go to your Browser address bar type and hit enter:      localhost:7080
 
 Open Visual Studio Code and click the 'Source Control' icon where you will initialize your local Git repository (Or do it in your own favorite Git/IDE environment)
 
