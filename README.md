@@ -150,7 +150,7 @@ Add - At least a discussion of MAKE and possibly scripting generally with emphas
 Dockerfile versions to be put on DockerHub registry.
 
 
-SUPERNOVICE APPENDIX: 
+#SUPERNOVICE APPENDIX: 
 If you are just starting out looking at different options for building a website, sometimes it can seem pretty complex.  Often times people are used to using their computer 
 with all the GUI (Graphical User Interface) applications we have come to enjoy.  But if you are going to enter the world where you are developing your own website, you are
 now going to get a little underneath the covers.  Drupal is a CMS (Content Management System) that really has extraordinary capabilities to do sophisticated websites.  It has
@@ -167,7 +167,7 @@ said, it is still a little harder than just driving around existing applications
 'command line interface' (CLI) to the guts of your computer.  Therefore, this SUPERNOVICE section is provided to give you some guidance in the basics.  It is stuck here at
 the end because many people who will use this GITHUB repository will be experienced developers who don't want to read through a bunch of stuff that they already know.
 
-OPERATING SYSTEMS & SHELLS -
+##OPERATING SYSTEMS & SHELLS -
 You probably are on a Mac or Windows, possibly even Linux; these are operating systems (OS).  Other than knowing which one you are using and some occassional differences in how
 you do various tasks, I won't review the details of each OS.  There are all sorts of things on places like Wikipedia that give nice overviews and histories.  But one thing
 you probably should know is that each of these OS's has something called a 'Kernel' that is like a set of commands that get the computer what to do.  And you talk to the
@@ -181,7 +181,7 @@ line like a command prompt on a terminal and you could be lost as to where the h
 that prompt show you information.  There is something discussed later called 'GIT/GITHUB' regarding your connection to a remote computer and we want to know where the heck
 we are on both our local computer and the remote computer.  So the BASH file edit outlined next does both.
 
-KNOWING WHERE YOU ARE -
+##KNOWING WHERE YOU ARE -
 You want to edit the .BASH_PROMPT file.  The 'dot' in front of it hints that it is a hidden file.  On a Mac you can hit CMD SHFT DOT and it will show hidden files.  Then copy
 the code from this link, paste it in and save it.*  (https://raw.githubusercontent.com/mathiasbynens/dotfiles/master/.bash_prompt).  Next time you open the terminal you should
 have a command prompt that shows you a colored two part prompt that indicates first what local subdirectory you are in and second where you on on GITHUB (since you probably
@@ -192,27 +192,27 @@ will use the keyboard function setting of your operating system and those are se
 and a box on that tab which, if checked, using “smart quotes and dashes”… Uncheck that box or you will be screwed up because the terminal can’t use that style quote and dashes in
 its commands.  
 
-DIAGNOSTICS:
+##DIAGNOSTICS:
 Sometime when you have problems it helps to know a few diagnostic tricks.  So some are provide here to at least get you started.  You can always search for more on specific topics
 if you at least get some of the basics covered.
 
-Check the paths -
+###Check the paths -
 The first thing that is often a problem is that some file isn't being found as it is needed.  You know about directories from your Finder or Explorer look around your system. But
 how does one part of your system know about files in another part?  This is where PATH comes into play.  You probably saw something like export PATH="/usr/local/git/bin:$PATH"
 when you looked in the .BASH_PROFILE, .BASH_RC, and/or .BASH_PROMPT examples mentioned earlier.  This is how you show one part of your system to another.  Before you go messing
 around with adding or editing those, two tips: 1) at your terminal command line interface type   echo $PATH   and hit enter to see what paths are present already and 2) See those
 things that look like quotation marks... we need to make sure they are  neutral, vertical, straight, or ASCII quotation marks, NOT the curly or curve kind from a word processor.
 
-Check the Bash file logic -
+###Check the Bash file logic -
 Sometimes you will get someting like   :Command not found    on your terminal when you open it even if the prompt eventually shows up and lets you continue.  But you have no idea 
 what command wasn't found, where, why, etc.  What you want to do is to debug the Bash files.  to do this put these two lines at the beginning and then the third line at the end
 of your Bash file, open the terminal and it will have given you a dump that you can trace where that Command not found kicked out.
 
-set -x			# activate debugging from here
-w
+`set -x			# activate debugging from here`
+`w`
 
-set +x			# stop debugging from here
+`set +x			# stop debugging from here`
 
-Checking Git Configuration -
+###Checking Git Configuration -
 Sometimes you might question where Git is pulling its information and it it is set up correctly.  To see where it is pulling from run   git config --list --show-origin
 
