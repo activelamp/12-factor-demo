@@ -219,7 +219,8 @@ Sometimes you might question where Git is pulling its information and it it is s
 
 `git config --list --show-origin`
 
-# SETTING UP YOUR BASIC SYSTEM BEFORE YOU GET STARTED WITH THE DRUPAL DOCKER CONTAINER 
+# SETTING UP YOUR BASIC SYSTEM BEFORE YOU GET STARTED
+## WITH THE DRUPAL DOCKER CONTAINER 
 
 Flesh these out with more explanation or source links but basically the following (note this is MAC oriented initially, then add Linux and Windows later) ...
 
