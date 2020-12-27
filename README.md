@@ -215,5 +215,6 @@ of your Bash file, open the terminal and it will have given you a dump that you 
 `set +x			# stop debugging from here`
 
 ### Checking Git Configuration -
-Sometimes you might question where Git is pulling its information and it it is set up correctly.  To see where it is pulling from run   `git config --list --show-origin`
+Sometimes you might question where Git is pulling its information and it it is set up correctly.  To see where it is pulling from run
+`git config --list --show-origin`
 
