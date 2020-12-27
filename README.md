@@ -224,8 +224,8 @@ Sometimes you might question where Git is pulling its information and it it is s
 
 Flesh these out with more explanation or source links but basically the following (note this is MAC oriented initially, then add Linux and Windows later) ...
 
-Install Homebrew
-Install Git
-Obtain GitHub account
-Establish SSH Key to GitHub account
-Install Visual Studio Code (possibly via homebrew vscode option)
+*Install Homebrew
+*Install Git
+*Obtain GitHub account
+*Establish SSH Key to GitHub account
+*Install Visual Studio Code (possibly via homebrew vscode option)
