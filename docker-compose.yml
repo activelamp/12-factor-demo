@@ -14,7 +14,7 @@ services:
       - mysqldata:/var/lib/mysql/data
 
   php:
-    image: drupal:8.3-fpm
+    image: drupal:8.9.11-fpm
     environment:
       DB_HOST: mariadb
       DB_USER: drupal
