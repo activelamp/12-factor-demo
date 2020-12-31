@@ -1,3 +1,10 @@
 Gemfile.lock
 .bundle
 .docker-sync
+
+# Ignore common database dump files by extension
+db-backups/*.mysql
+db-backups/*.sql
+db-backups/*.gz
+db-backups/*.xz
+db-backups/*.zip
