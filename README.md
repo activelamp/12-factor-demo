@@ -207,7 +207,19 @@ will use the keyboard function setting of your operating system and those are se
 and a box on that tab which, if checked, using “smart quotes and dashes”… Uncheck that box or you will be screwed up because the terminal can’t use that style quote and dashes in
 its commands.  
 
-## DIAGNOSTICS:
+## SETTING UP YOUR BASIC SYSTEM BEFORE YOU GET STARTED
+### WITH THE DRUPAL DOCKER CONTAINER 
+
+Flesh these out with more explanation or source links but basically the following (note this is MAC oriented initially, then add Linux and Windows later) ...
+
+* Install Homebrew
+* Install Git
+* Obtain GitHub account
+* Establish SSH Key to GitHub account
+* Install Visual Studio Code (possibly via homebrew vscode option)
+
+
+# DIAGNOSTICS:
 Sometime when you have problems it helps to know a few diagnostic tricks.  So some are provide here to at least get you started.  You can always search for more on specific topics
 if you at least get some of the basics covered.
 
@@ -234,13 +246,3 @@ Sometimes you might question where Git is pulling its information and it it is s
 
 `git config --list --show-origin`
 
-# SETTING UP YOUR BASIC SYSTEM BEFORE YOU GET STARTED
-## WITH THE DRUPAL DOCKER CONTAINER 
-
-Flesh these out with more explanation or source links but basically the following (note this is MAC oriented initially, then add Linux and Windows later) ...
-
-* Install Homebrew
-* Install Git
-* Obtain GitHub account
-* Establish SSH Key to GitHub account
-* Install Visual Studio Code (possibly via homebrew vscode option)
