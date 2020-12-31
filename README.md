@@ -219,6 +219,8 @@ Flesh these out with more explanation or source links but basically the followin
 * Install Visual Studio Code (possibly via homebrew vscode option)
 
 
+Add - Include a quick discussion of how to get to the parts of VSCode to invoke a terminal to issue git/github commands, to bring up the command palette (like CLI) via shift-command-p, and to install extensions (plus what key extensions will really help you get started).
+
 # DIAGNOSTICS:
 Sometime when you have problems it helps to know a few diagnostic tricks.  So some are provide here to at least get you started.  You can always search for more on specific topics
 if you at least get some of the basics covered.
