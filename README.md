@@ -86,7 +86,7 @@ Lets Get Ready by Putting Drupal On our Local Host Machine
 The real key to what Tom Friedhof’s approach is that inclusion of docker-sync so the Host easily coordinates with the docker container.  That said, we need to get Drupal
 on the host machine.  Freidhof’s second video really outlines that process through its discussion of Dependency management with Docker, Drupal and Composer.
 
-The Clean New Site Approach:
+## The Clean New Site Approach:
 Not to be confused with ‘docker-compose’ there is something called “Composer” that is a dependency manager for PHP.   Drupal is written in PHP, and Composer has been essential
 to working with Drupal since version 8.  Most people who have worked with Drupal are aware of Composer primarily as the thing that makes sure the “Modules” you add to the
 basic or core installation of Drupal all work in concert with one another; thus the picture of the orchestra conductor on the Composer website.  You need to have Composer
@@ -94,8 +94,6 @@ installed at this point to continue.  (https://getcomposer.org/download/)
 
 To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find a good starting point.  It should take you to a
 GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
-
-TO BE CONTINUED
 
 Add - the key next thing to put in documentation is how you remove the docker-compose.yml installed .src directory and below, replacing it with an empty .src directory 
 in which you run the correct version of (https://github.com/drupal-composer/drupal-project/tree/8.x).  It is likely that this current repository should edit a branch and
@@ -107,18 +105,18 @@ good discussion of what might be implied for 'major versions' and for key suppor
 
 
 
-Add - The expansion of directory structure for backup copies of database files and multi-site workflow managed sites.  Make sure to include modifications of the .gitignore
-file but with placeholder non-ignored files in the directories to hold the tree structure.     Per "Dockerize an Existing Project"   (https://drupalize.me/tutorial/dockerize-existing-project?p=3040).  See if there is any reason NOT to use the .gitkeep file name for the non-ignored files like this repository does
-(https://github.com/Drupal-FR/site-drupalfr/tree/8.x-1.x/backups).
+### Inclusion of a db-backups subdirectory: 
+This repository has an addition not included in Mr. Friedhof's at the project (top) level called db-backups.  The original .gitignore file was also modified so that any database
+files put into that db-backups subdirectory aren't included in .git for pushup to your github repository. Thus, db-backups is basically have an empty subdirectory; but we put a
+.keep file in it so it is acknowledged by Git and retained as you clone/pull/push with Github. There are two broad reasons for this database backup subdirectory. First, remember
+we are attempting to build a 'WORKFLOW' logic to our design and you may logically want to have a 'work spot' to bring a copy of your production database into locally as you cycle
+through your work flow. Second, this respository is attempting to create a reasonably automated process to jump start a new site with relatively novice skills and this database
+subdirectory can house a canonical working database that may contain minimal site content resources related that configurs some select module, taxonomy, configuration information
+past what Drupal itself houses (with a project.sql.example name for inclusion the git/github management). This second point may seem odd, and Drupal.Org has extensive discussion
+of Drupal configuration management that is mainly managed with .yml files from Version 8 forward; but also comments how it stores configuration elements in the database. For
+additional discussion of these directory structure changes see "Dockerize an Existing Project" (https://drupalize.me/tutorial/dockerize-existing-project?p=3040).
 
-Add - Discussion of a couple hosting option alternatives.   The overview that shows how you put more into your Docker-compose and/or Dockerfile project definitions that later
-if its content around 16 minute in includes one realatively generic hosting option "Putting it All Together - Docker, Docker-Compose, NGinx Proxy Manager, and Domain
-Routing - How To." (https://www.youtube.com/watch?v=cjJVmAI1Do4).  But also offer the deeper support option of Lagoon with Amazee.io hosting as discussed in "How to manage
-Multiple Drupal sites with Lagoon" (https://www.youtube.com/watch?v=R2tIivVvExQ&feature=emb_rel_end) | May want to work directly with Amazee staff on final coordination after
-providing them with the basic structure and logic from the other elements in this repo. |  One key element to reconcile is that the multi-site logic of the Logoon approach
-discussed in this video takes precedence over the multi-site aspect of the "Dockerize an Existin Project" directory layout; but NOT over the database backup aspects.  And, make
-sure a user discussion of the benefits over classic drupal multi-site config approach is provided in summary so they only have to watch the Lagoon video if they want super
-detail.  And don't forget to include the "Secrets" approach to protecting credentials in corrdination with the gitignore specifications. 
+Add - A specific project.sql.example file into the db-backups subdirectory and instructions here on renaming it.
 
 Add - inclusion of and discussion of detailed workflow value of using the .env approach to environment management.  See if the environment can be fully common between the 
 Development, Staging-Testing, and Production elements of each supported site in a multi-site but simply use DockerHub registry held version of each workflow element with 
@@ -127,6 +125,23 @@ from this Drupal template for to make sure we are clean (https://github.com/drup
 pay dividends to cross check best practices here (https://github.com/vlucas/phpdotenv). And, make sure this is coordinated with the credentials approach as noted here for
 'autoload' (https://stackoverflow.com/questions/30881596/php-dotenv-unable-to-load-env-vars) remembering that the ActiveLamp starting point is working the autoload in the
 vendor subdirectory 
+
+
+
+
+
+
+
+# TO BE CONTINUED
+## Stuff I need to add to the functionality and documentation of this repository after the clean new install is fully running
+Add - Discussion of a couple hosting option alternatives.   The overview that shows how you put more into your Docker-compose and/or Dockerfile project definitions that later
+if its content around 16 minute in includes one realatively generic hosting option "Putting it All Together - Docker, Docker-Compose, NGinx Proxy Manager, and Domain
+Routing - How To." (https://www.youtube.com/watch?v=cjJVmAI1Do4).  But also offer the deeper support option of Lagoon with Amazee.io hosting as discussed in "How to manage
+Multiple Drupal sites with Lagoon" (https://www.youtube.com/watch?v=R2tIivVvExQ&feature=emb_rel_end) | May want to work directly with Amazee staff on final coordination after
+providing them with the basic structure and logic from the other elements in this repo. |  One key element to reconcile is that the multi-site logic of the Logoon approach
+discussed in this video takes precedence over the multi-site aspect of the "Dockerize an Existin Project" directory layout; but NOT over the database backup aspects.  And, make
+sure a user discussion of the benefits over classic drupal multi-site config approach is provided in summary so they only have to watch the Lagoon video if they want super
+detail.  And don't forget to include the "Secrets" approach to protecting credentials in corrdination with the gitignore specifications. 
 
 Add - cross check the original Active/Lamp approach to the Drush installation to make sure it is updated to the latest Drush version.  And in the process cross check
 this repository on good Drush with Drupal practices (https://stackoverflow.com/questions/35743801/how-to-use-docker-with-drupal-and-drush).
