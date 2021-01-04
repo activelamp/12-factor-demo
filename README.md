@@ -52,8 +52,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 The first file to take a look at in the GitHub repository is that “Makefile” .   Think about it as the file that you are going to run to invoke the establishment (Make Setup) of a
 Docker container(s) and then to run (Make Start) the container(s).  Start with the line 'Bundle-Install:' and 'Start-Sync:'.  These are behind making the Docker-Sync function work 
 and the name 'gem' is in reference to the fact they are written in the Ruby language.  So you might want to glance at the the 'gemfile', 'gemfile.lock' and at the hidden directory
-'.bundle' which contains this function's configuration files and supporting components. Perhaps the most interesting syntax in the Makefile is the call to docker.sync; a function
-that basically is the coordination point for how your HOST outside the container talks with the inside of the container.  Discussed further later.\
+'.bundle' which contains this function's configuration files and supporting components. (Remember Cmd+Shft+period can be used to show hidden files on a Mac).  
 
 The lines you probably want to pay the closest attention to are the 'Setup:' and 'Start-Services:' steps.  Recalling that you will run the (Make Setup) and (Make Start) steps from 
 the command line, you will want to trace what they are doing by looking under each.  You can see commands that do typical things like Pull and Push images, invoke Docker to 
@@ -84,11 +83,8 @@ image that is available on the DockerHub list.  You do this edit before the "MAK
 Sharing what you do to your application on the HOST with the container that will run the application you are building.
 
 ### The docker-sync.yml file
-Next look in the ‘docker-sync.yml’ file at the instruction on the line 7 example; it is telling this tool that we want to share the ‘./src/web/profiles’ directory on our HOST
-computer (and all subdirectories and files beneath it) with the container.  We have a related instruction in the docker.compose-dev.yml file to tell php within the container
-where it is to get the files it needs.  It says to get those files from ‘drupal-sync’ and then to make them available within the container in the ‘/var/www/html/profiles’
-directory. In essence, this says “Use the files from ‘-drupal-sync:’ and mount them in the volume ‘/var/www/html/profiles’ within the container.   REMEMBER THAT IF YOU CHANGE
-THE LOCAL HOST DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES NOTED IN THE ABOVE TWO POINTS!
+Perhaps the most interesting syntax in the Makefile is the call to docker.sync; a function that basically is the coordination point for how your HOST outside the container talks
+with the inside of the container.  The ‘docker-sync.yml’ file at the instruction on the line 7 example; it is telling this tool that we want to share the ‘./src/web/profiles’ directory on our HOST computer (and all subdirectories and files beneath it) with the container.  We have a related instruction in the docker.compose-dev.yml file to tell php within the container where it is to get the files it needs.  It says to get those files from ‘drupal-sync’ and then to make them available within the container in the ‘/var/www/html/profiles’ directory. In essence, this says “Use the files from ‘-drupal-sync:’ and mount them in the volume ‘/var/www/html/profiles’ within the container.   REMEMBER THAT IF YOU CHANGE THE LOCAL HOST DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES NOTED IN THE ABOVE TWO POINTS!
 
 <img src="img/DockerSyncYML.png" width="300">
 
