@@ -53,7 +53,7 @@ installation of everything else.  You can see commands in it that do typical thi
 docker-composer.yml and docker-compose.dev.yml that define the environment.  But the most interesting syntax is the call to docker.sync; a function that basically is the
 coordination point for how your HOST outside the container talks with the inside of the container. 
 
-![Make file](img/MakeFile.png)
+<img scr="img/MakeFile.png" width="100">
 
 The ‘docker-compose.yml’ file is the place where the container environment is established.  There are all sorts of videos and other resources that tell you how to set up
 the container so I don’t go into a bunch of detail here.  The key thing to know is that containers are made up of ‘images’ and that ‘images’ are pulled from places like
