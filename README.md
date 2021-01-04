@@ -53,7 +53,7 @@ installation of everything else.  You can see commands in it that do typical thi
 docker-composer.yml and docker-compose.dev.yml that define the environment.  But the most interesting syntax is the call to docker.sync; a function that basically is the
 coordination point for how your HOST outside the container talks with the inside of the container. 
 
-<img src="img/MakeFile.png" width="600">
+<img src="img/MakeFile.png" width="500">
 
 The ‘docker-compose.yml’ file is the place where the container environment is established.  There are all sorts of videos and other resources that tell you how to set up
 the container so I don’t go into a bunch of detail here.  The key thing to know is that containers are made up of ‘images’ and that ‘images’ are pulled from places like
@@ -63,7 +63,7 @@ take a look at what Docker4Drupal has in its  GitHub repository for this key fil
 include a separate mailing system.  As my project repository develops, you might anticipate we will add further functionality but remember, in a Development, Staging-Testing,
 Production orientation to support CI/CD workflow.
 
-<img src="img/DockerComposeYML.png" width="400">
+<img src="img/DockerComposeYML.png" width="600">
 
 Under the php: line in the docker-compose.yml file you will notice  an image: line with a drupal:version (in the original Active/Lamp repository this was image: drupal:8.3-fpm
 at the time the original fork was pulled).  It really doesn't specifically matter which drupal version is in this docker-compose.yml file because the actual Drupal install
