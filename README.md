@@ -63,15 +63,14 @@ take a look at what Docker4Drupal has in its  GitHub repository for this key fil
 include a separate mailing system.  As my project repository develops, you might anticipate we will add further functionality but remember, in a Development, Staging-Testing,
 Production orientation to support CI/CD workflow.
 
-![Docker-Compose file](img/DockerComposeYML.png)
+![Docker-Compose Yml file](img/DockerComposeYML.png)
 
 Under the php: line in the docker-compose.yml file you will notice  an image: line with a drupal:version (in the original Active/Lamp repository this was image: drupal:8.3-fpm
 at the time the original fork was pulled).  It really doesn't specifically matter which drupal version is in this docker-compose.yml file because the actual Drupal install
 is done after the fact from the Composer.Json file; but the DockerHub registry image didn't show 8.3-fpm any more and thus one key is to update this starting point to a Drupal 
 image that is available on the DockerHub list.  You do this edit before the "MAKE" step is run.
 
-
-![Docker-Compose-Dev file](img/DockerComposeDevYML.png
+![Docker-Compose-Dev Yml file](img/DockerComposeDevYML.png)
 
 Sharing what you do to your application on the HOST with the container that will run the application you are building.
 
