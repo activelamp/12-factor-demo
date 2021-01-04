@@ -53,6 +53,8 @@ installation of everything else.  You can see commands in it that do typical thi
 docker-composer.yml and docker-compose.dev.yml that define the environment.  But the most interesting syntax is the call to docker.sync; a function that basically is the
 coordination point for how your HOST outside the container talks with the inside of the container. 
 
+![Make file](img/MakeFile.png)
+
 The ‘docker-compose.yml’ file is the place where the container environment is established.  There are all sorts of videos and other resources that tell you how to set up
 the container so I don’t go into a bunch of detail here.  The key thing to know is that containers are made up of ‘images’ and that ‘images’ are pulled from places like
 DockerHub.  Images are the parts and are assembled into the whole; assuring that the parts talk to each other is one of the key things in defining the docker-compose.yml
@@ -61,10 +63,15 @@ take a look at what Docker4Drupal has in its  GitHub repository for this key fil
 include a separate mailing system.  As my project repository develops, you might anticipate we will add further functionality but remember, in a Development, Staging-Testing,
 Production orientation to support CI/CD workflow.
 
+![Docker-Compose file](img/DockerComposeYML.png)
+
 Under the php: line in the docker-compose.yml file you will notice  an image: line with a drupal:version (in the original Active/Lamp repository this was image: drupal:8.3-fpm
 at the time the original fork was pulled).  It really doesn't specifically matter which drupal version is in this docker-compose.yml file because the actual Drupal install
 is done after the fact from the Composer.Json file; but the DockerHub registry image didn't show 8.3-fpm any more and thus one key is to update this starting point to a Drupal 
 image that is available on the DockerHub list.  You do this edit before the "MAKE" step is run.
+
+
+![Docker-Compose-Dev file](img/DockerComposeDevYML.png
 
 Sharing what you do to your application on the HOST with the container that will run the application you are building.
 
@@ -73,6 +80,8 @@ computer (and all subdirectories and files beneath it) with the container.  We h
 where it is to get the files it needs.  It says to get those files from ‘drupal-sync’ and then to make them available within the container in the ‘/var/www/html/profiles’
 directory. In essence, this says “Use the files from ‘-drupal-sync:’ and mount them in the volume ‘/var/www/html/profiles’ within the container.   REMEMBER THAT IF YOU CHANGE
 THE LOCAL HOST DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES NOTED IN THE ABOVE TWO POINTS!
+
+![Docker-Sync file](img/DockerSyncYML.png)
 
 A change to the HOST:CONTAINER directory synchronization edit is made between Mr. Friedhof's first and second video. The reason that this change is made is discussed in the
 second active lamp video by Tom Friedhof; “Factor Two - Dependency Management with Docker, Drupal, and Composer” (https://www.youtube.com/watch?v=BhdSn6XlmWo).  In a 
