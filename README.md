@@ -63,14 +63,14 @@ take a look at what Docker4Drupal has in its  GitHub repository for this key fil
 include a separate mailing system.  As my project repository develops, you might anticipate we will add further functionality but remember, in a Development, Staging-Testing,
 Production orientation to support CI/CD workflow.
 
-![Docker-Compose Yml file](img/DockerComposeYML.png)
+<img src="img/DockerComposeYML.png" width="400">
 
 Under the php: line in the docker-compose.yml file you will notice  an image: line with a drupal:version (in the original Active/Lamp repository this was image: drupal:8.3-fpm
 at the time the original fork was pulled).  It really doesn't specifically matter which drupal version is in this docker-compose.yml file because the actual Drupal install
 is done after the fact from the Composer.Json file; but the DockerHub registry image didn't show 8.3-fpm any more and thus one key is to update this starting point to a Drupal 
 image that is available on the DockerHub list.  You do this edit before the "MAKE" step is run.
 
-![Docker-Compose-Dev Yml file](img/DockerComposeDevYML.png)
+<img src="img/DockerComposeDevYML.png" width="400">
 
 Sharing what you do to your application on the HOST with the container that will run the application you are building.
 
@@ -80,7 +80,7 @@ where it is to get the files it needs.  It says to get those files from ‘drupa
 directory. In essence, this says “Use the files from ‘-drupal-sync:’ and mount them in the volume ‘/var/www/html/profiles’ within the container.   REMEMBER THAT IF YOU CHANGE
 THE LOCAL HOST DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES NOTED IN THE ABOVE TWO POINTS!
 
-![Docker-Sync file](img/DockerSyncYML.png)
+<img src="img/DockerSyncYML.png" width="300">
 
 A change to the HOST:CONTAINER directory synchronization edit is made between Mr. Friedhof's first and second video. The reason that this change is made is discussed in the
 second active lamp video by Tom Friedhof; “Factor Two - Dependency Management with Docker, Drupal, and Composer” (https://www.youtube.com/watch?v=BhdSn6XlmWo).  In a 
