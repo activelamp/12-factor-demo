@@ -1,4 +1,4 @@
-# 12-factor-demo
+# 12-factor-demo (DON'T USE THIS REPOSITORY YET)
 This is a direct fork of ActiveLamp/12-factor-demo; with the intent of attempting to bring it up to date as a Drupal repository for Docker with a Docker-Sync component
 facilitating local site development.  In addition to moving to Drupal 8.9.X for the basic install, watch to see if progress is made to add a much richer Composer.Json file
 to 'Base' so that a user has a real jump start on a configured Drupal install with some key contributed modules.  The other intent is to work with the Docker-compose files
