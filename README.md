@@ -54,8 +54,8 @@ docker-composer.yml and docker-compose.dev.yml that define the environment.  But
 coordination point for how your HOST outside the container talks with the inside of the container. 
 
 <img src="img/MakeFile.png" width="500">\
-See sequence of multiple compose files:  https://docs.docker.com/compose/reference/overview/#specifying-multiple-compose-files\
-
+See - "Start Services:" Understand the sequence of multiple compose files:  https://docs.docker.com/compose/reference/overview/#specifying-multiple-compose-files\
+\
 
 The ‘docker-compose.yml’ file is the place where the container environment is established.  There are all sorts of videos and other resources that tell you how to set up
 the container so I don’t go into a bunch of detail here.  The key thing to know is that containers are made up of ‘images’ and that ‘images’ are pulled from places like
