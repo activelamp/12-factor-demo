@@ -66,10 +66,17 @@ https://docs.docker.com/compose/reference/overview/#specifying-multiple-compose-
 The ‘docker-compose.yml’ file is the place where the container environment is established.  There are all sorts of videos and other resources that tell you how to set up
 the container so I don’t go into a bunch of detail here.  The key thing to know is that containers are made up of ‘images’ and that ‘images’ are pulled from places like
 DockerHub.  Images are the parts and are assembled into the whole; assuring that the parts talk to each other is one of the key things in defining the docker-compose.yml
-file.  Think of what the ActiveLamp/12-factor-demo GitHub has in its docker-compose.yml file is just the core basics.  After you get comfortable with that, you  might want to
-take a look at what Docker4Drupal has in its  GitHub repository for this key file and get ideas on what you might add to enhance performance from caching or how you might
-include a separate mailing system.  As my project repository develops, you might anticipate we will add further functionality but remember, in a Development, Staging-Testing,
-Production orientation to support CI/CD workflow.
+file.  Think of what the ActiveLamp/12-factor-demo GitHub has in its docker-compose.yml file is just the core basics.
+
+What we want to do is relate this docker-compose.yml file to how it works in the overall system.  The core basics is fine in some regards but has limitations in others. 
+Thus, glance back up at the "Start Services:" lines in the Makefile to understand how one might expand from the basics.  You see in that line how docker-compose.yml is
+followed by the docker-compose-dev.yml file and the key of what you need to know is that the line processes left to right; meaning if you put additons after the
+docker-compose.yml file in a subsequent file on that line the commands in the following file will add to or override those in the preceding yml file.  Why we care about
+this is that certain stuff we want in our development environment like tools to build our site but we want to remove them from being in the production environment so they
+don't create a security risk.  On the flipside, there are some things we want in our production environment to make it faster or work across server, etc. that would get in
+the way if we had them in our development environment.  And, of course, we want our testing environment to pretty much match our production environment but we may have some
+of the testing tools themselves that should be excluded from production.  As this project repository develops, you might anticipate we will add further functionality
+in a Development, Staging-Testing, Production orientation to support CI/CD workflow.
 
 <img src="img/DockerComposeYML.png" width="600">
 
