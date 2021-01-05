@@ -80,10 +80,13 @@ in a Development, Staging-Testing, Production orientation to support CI/CD workf
 
 <img src="img/DockerComposeYML.png" width="600">
 
-Under the php: line in the docker-compose.yml file you will notice  an image: line with a drupal:version (in the original Active/Lamp repository this was image: drupal:8.3-fpm
-at the time the original fork was pulled).  It really doesn't specifically matter which drupal version is in this docker-compose.yml file because the actual Drupal install
-is done after the fact from the Composer.Json file; but the DockerHub registry image didn't show 8.3-fpm any more and thus one key is to update this starting point to a Drupal 
-image that is available on the DockerHub list.  You do this edit before the "MAKE" step is run.
+Under the ~php:~ line in the docker-compose.yml file shown above, you will notice  an ~image:~ line with a ~drupal:version~. In the original ActiveLamp repository the Drupal
+image: was ~drupal:8.3-fpm~ but in this repository it has been changed; and YOU might want to change it yourself at some point if you need to.  It really doesn't specifically
+matter which drupal version is in this docker-compose.yml file because the actual Drupal site install is done in a later step via the Composer.Json file (which is discussed
+later in this documentation).  The reason the change was made between what ActiveLamp repository used and what this one uses is because you need an image to still be available
+on the DockerHub registry to be called in the build.  The ActiveLamp image of 8.3-fpm didn't show on the list any more and thus one key is to update this starting point to a 
+Drupal image that is available on the DockerHub list.  If this repository isn't current when you use it, check DockerHub for an available Drupal image and do this edit before
+the "MAKE" step is run.
 
 <img src="img/DockerComposeDevYML.png" width="400">
 
