@@ -87,11 +87,22 @@ later in this documentation). ***However, the version used in this docker-compos
 take advantage of backward compatibility***. The reason the change was made between what ActiveLamp repository used and what this one uses is because you need an image to still
 be available on the DockerHub registry to be called in the build.  The ActiveLamp image of 8.3-fpm didn't show on the list any more and thus one key is to update this starting
 point to a Drupal image that is available on the DockerHub list.  If this repository isn't current when you use it, check DockerHub for an available Drupal image and do this edit
-beforethe "MAKE" step is run.
+beforethe "MAKE" step is run.\
 
-<img src="img/DockerComposeDevYML.png" width="400">
+Sharing what you do to your application on the HOST with the container that will run the application has a couple key aspects to it.  If we think of Containers like 'vapor'
+the question must be addressed regarding how my efforts will be saved or persist after working on them. And we also need to address the question of how and the heck do I
+do work inside this Container in the first place.  If our repository, we see how these questions are being addressed via loading the Docker-Compose-Dev.yml file following the
+load of the Docker-Compose.yml file in that 'Start Services:' line in the Makefile.  This Docker-Compose-Dev.yml file is using the Docker "Volume" function to address that
+persistency question and the Docker-Sync.yml approach as a way to have edits you make on your local host files to syncronize with updates to the files in your Container.\ 
 
-Sharing what you do to your application on the HOST with the container that will run the application you are building.
+<img src="img/DockerComposeDevYML.png" width="400">\
+
+The concept of Docker Volumes is one of the standard ways that Docker itself has the Container store stuff on your local host.  Inside the running container there is a writable
+layer for your data and you want it in there for performance.  But to get your information to persist after the container is shut down for any reason, you want the information
+to be stored and Docker offers a couple ways to do this.  Volumes is one of the ways and as this is being written, is noted by Docker as the preferred approach.  You can learn
+more about this on the Docker site (https://docs.docker.com/storage/volumes/).\
+
+
 
 ### The docker-sync.yml file
 Perhaps the most interesting syntax in the Makefile is the call to docker.sync; a function that basically is the coordination point for how your HOST outside the container talks
