@@ -259,7 +259,7 @@ Flesh these out with more explanation or source links but basically the followin
 * Obtain GitHub account
 * Establish SSH Key to GitHub account
 * Install Visual Studio Code (possibly via homebrew vscode option)
-
+* Install Composer (see Drupal.org background on Composer for lots of detail: https://www.drupal.org/docs/develop/using-composer)
 
 Add - Include a quick discussion of how to get to the parts of VSCode to invoke a terminal to issue git/github commands, to bring up the command palette (like CLI) via shift-command-p, and to install extensions (plus what key extensions will really help you get started).
 
