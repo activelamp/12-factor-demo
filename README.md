@@ -111,7 +111,10 @@ with the inside of the container.  Take a look at line 7 in the ‘docker-sync.y
 to get the files it needs.  It says to get those files from ‘drupal-sync’ and then to make them available within the container in the ‘/var/www’ directory. In
 essence, this says “Use the files from ‘-drupal-sync:’ and mount them in the volume ‘/var/www’ within the container.\   
 
+REMEMBER THAT IF YOU CHANGE THE LOCAL HOST DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES AS NOTED ABOVE!
+
 <img src="img/DockerSyncYML.png" width="300">
+
 ###### Why is Friedhof's ActiveLamp Video showing different directories?
 
 _A change to the HOST:CONTAINER directory synchronization edit is made between Mr. Friedhof's first and second video. The reason that this change is made is discussed in the
@@ -121,8 +124,6 @@ understand at this point is that the above change is in the docker-sync.yml file
 docker-compose-dev.yml file note for both php and ngnix that volumes are declared where drupal-sync is telling the container where to locate the application files it is
 referencing from your local machine as -drupal-sync:/var/www:nocopy   You might find "Docker Basics: How to Share Data Between a Docker Container and Host"
 (https://thenewstack.io/docker-basics-how-to-share-data-between-a-docker-container-and-host/) a good way to get an overview of what "Volumes" are doing for you in Docker._
-
-REMEMBER THAT IF YOU CHANGE THE LOCAL HOST DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES NOTED IN THE ABOVE TWO POINTS!
 
  ----------------------------------------------------------------------------   
 
