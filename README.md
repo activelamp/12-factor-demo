@@ -108,8 +108,8 @@ more about this on the Docker site (https://docs.docker.com/storage/volumes/).\
 Perhaps the most interesting syntax in the Makefile is the call to docker.sync; a function that basically is the coordination point for how your HOST outside the container talks
 with the inside of the container.  Take a look at line 7 in the ‘docker-sync.yml’ file; it is telling this tool that we want to share the ‘./src’ directory on our HOST computer 
 (and all subdirectories and files beneath it) with the container.  We have a related instruction in the docker.compose-dev.yml file to tell php within the container where it is
-to get the files it needs.  It says to get those files from ‘drupal-sync’ and then to make them available within the container in the ‘/var/www/html/profiles’ directory. In
-essence, this says “Use the files from ‘-drupal-sync:’ and mount them in the volume ‘/var/www/html/profiles’ within the container.   REMEMBER THAT IF YOU CHANGE THE LOCAL HOST
+to get the files it needs.  It says to get those files from ‘drupal-sync’ and then to make them available within the container in the ‘/var/www/’ directory. In
+essence, this says “Use the files from ‘-drupal-sync:’ and mount them in the volume ‘/var/www/’ within the container.   REMEMBER THAT IF YOU CHANGE THE LOCAL HOST
 DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES NOTED IN THE ABOVE TWO POINTS!\
 
 <img src="img/DockerSyncYML.png" width="300">
