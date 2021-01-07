@@ -113,7 +113,7 @@ essence, this says “Use the files from ‘-drupal-sync:’ and mount them in t
 DIRECTORY FOR THINGS LIKE EXISTING SITES OR FOR A MULTI-SITE STRATEGY, YOU NEED TO ADJUST THE LINES NOTED IN THE ABOVE TWO POINTS!\
 
 <img src="img/DockerSyncYML.png" width="300">\
-######Why is Friedhof's ActiveLamp Video showing different directories?
+###### Why is Friedhof's ActiveLamp Video showing different directories?\
 _A change to the HOST:CONTAINER directory synchronization edit is made between Mr. Friedhof's first and second video. The reason that this change is made is discussed in the
 second active lamp video by Tom Friedhof; “Factor Two - Dependency Management with Docker, Drupal, and Composer” (https://www.youtube.com/watch?v=BhdSn6XlmWo).  In a 
 nutshell, the reason is because how and where he did the local host installation of Drupal using container; to /var/www/src rather than /var/www/html.  The key thing to 
