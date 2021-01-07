@@ -119,8 +119,8 @@ second active lamp video by Tom Friedhof; “Factor Two - Dependency Management 
 nutshell, the reason is because how and where he did the local host installation of Drupal using container; to /var/www/src rather than /var/www/html.  The key thing to 
 understand at this point is that the above change is in the docker-sync.yml file where line six is drupal-sync: and line seven is scr: '/.scr' now. Then in the
 docker-compose-dev.yml file note for both php and ngnix that volumes are declared where drupal-sync is telling the container where to locate the application files it is
-referencing from your local machine as -docker-sync:/var/www:nocopy   You might find "Docker Basics: How to Share Data Between a Docker Container and Host"
-(https://thenewstack.io/docker-basics-how-to-share-data-between-a-docker-container-and-host/) a good way to get an overview of what "Volumes" are doing for you in Docker._\
+referencing from your local machine as -drupal-sync:/var/www:nocopy   You might find "Docker Basics: How to Share Data Between a Docker Container and Host"
+(https://thenewstack.io/docker-basics-how-to-share-data-between-a-docker-container-and-host/) a good way to get an overview of what "Volumes" are doing for you in Docker._
 
  ----------------------------------------------------------------------------   
 
