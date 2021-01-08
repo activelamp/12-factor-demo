@@ -52,3 +52,12 @@ robots.txt
 /src/web/sites/example.sites.php
 update.php
 web.config
+
+# Ignore log files
+*.log
+
+# Ignore Mac OS finder preference files
+.DS_Store
+
+# Ignore node_modules build files
+node_modules/
