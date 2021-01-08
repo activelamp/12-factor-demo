@@ -129,10 +129,15 @@ referencing from your local machine as -drupal-sync:/var/www:nocopy   You might 
 
 
 ## The Clean New Site Approach:
+
+#### Composer PHP Dependency Manager's Role
 Not to be confused with ‘docker-compose’ there is something called “Composer” that is a dependency manager for PHP.   Drupal is written in PHP, and Composer has been essential
 to working with Drupal since version 8.  Most people who have worked with Drupal are aware of Composer primarily as the thing that makes sure the “Modules” you add to the
-basic or core installation of Drupal all work in concert with one another; thus the picture of the orchestra conductor on the Composer website.  You need to have Composer
-installed at this point to continue.  (https://getcomposer.org/download/)
+basic or core installation of Drupal all work in concert with one another; thus the picture of the orchestra conductor on the Composer website. PHP is inherent in some other
+aspects of Drupal as well for things like Twig in themes that make the site look attractive and the underlying Symphony component.  Right now you don't need to dive into all
+its roles and value, just trust that you will be needing to use it now and a lot later on too.  You need to have Composer installed at this point to continue and you can find
+it at (https://getcomposer.org/download/)
+
 
 To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find a good starting point.  It should take you to a
 GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
@@ -259,7 +264,7 @@ Flesh these out with more explanation or source links but basically the followin
 * Obtain GitHub account
 * Establish SSH Key to GitHub account
 * Install Visual Studio Code (possibly via homebrew vscode option)
-
+* Install Composer (see Drupal.org background on Composer for lots of detail: https://www.drupal.org/docs/develop/using-composer)
 
 Add - Include a quick discussion of how to get to the parts of VSCode to invoke a terminal to issue git/github commands, to bring up the command palette (like CLI) via shift-command-p, and to install extensions (plus what key extensions will really help you get started).
 
