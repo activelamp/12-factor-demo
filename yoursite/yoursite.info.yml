@@ -1,10 +1,10 @@
-name: ActiveLAMP
+name: YourSite
 type: profile
-description: "ActiveLAMP Profile"
+description: "YourSite Profile"
 core: 8.x
 
 distribution:
-  name: ActiveLAMP
+  name: YourSite
 
 dependencies:
   - node
@@ -41,7 +41,6 @@ dependencies:
   - views_ui
   - tour
   - automated_cron
-  - twelvefactor
 themes:
   - bartik
   - seven
