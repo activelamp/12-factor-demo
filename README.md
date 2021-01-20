@@ -56,7 +56,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 
 11) Run:    `Make Start`
 
-12) Go to your Browser address bar type and hit enter:    `localhost:7080`   (Or, if you are using Docker Dashboard, you can now go the running container and into the application). 
+12) Go to your Browser address bar type and hit enter:    `localhost:7080`   (Or, if you are using Docker Dashboard, you can now go to the running container and into the application). 
 
 13) If your are going to start working on customization of the Drupal site with an intent to save it, you probably should also Open Visual Studio Code and click the 'Source Control' icon where you will initialize your local Git repository (Or do it in your own favorite Git/IDE environment)
 
