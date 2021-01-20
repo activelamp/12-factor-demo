@@ -40,7 +40,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 
 3) Type `rm -rf src` on the command line and hit enter to remove the existing Drupal version in preparation of an update.
 
-4) Type 'mkdir src` on the command line and hit enter to make a new src (source) directory to install into.
+4) Type `mkdir src` on the command line and hit enter to make a new src (source) directory to install into.
 
 5) Type or copy/paste `composer create-project drupal/recommended-project:8.9.11 src` on the command line and hit enter to install a Drupal version into the src (source) directory you just created.  You may want to change the 8.9.11 part of that command with any version 8 that is MORE CURRENT if one is available that you want.
 
