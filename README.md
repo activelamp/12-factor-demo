@@ -63,7 +63,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 --------------------------------------------------------------
 # WHAT'S GOING ON & ADDTIONAL STEPS TO TAKE THINGS FURTHER
 ### The makefile
-The first file to take a look at in the GitHub repository is that “Makefile” .   Think about it as the file that you are going to run to invoke the establishment (Make Setup) of a
+The first file to take a look at in the GitHub repository is that “Makefile”.   Think about it as the file that you are going to run to invoke the establishment (Make Setup) of a
 Docker container and then to run (Make Start) the container.  Start with the line 'Bundle-Install:' and 'Start-Sync:'.  These are behind making the Docker-Sync function work 
 and the name 'gem' is in reference to the fact they are written in the Ruby language.  So you might want to glance at the the 'gemfile', 'gemfile.lock' and at the hidden directory
 '.bundle' which contains this function's configuration files and supporting components. (Remember Cmd+Shft+period can be used to show hidden files on a Mac).  
