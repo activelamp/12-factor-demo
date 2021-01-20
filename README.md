@@ -46,7 +46,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 
 6) Make sure you are in the Project level directory (12-factor-demo), then type or copy/paste `mv yoursite src/web/profiles` on the command line and hit enter to move the pre-established base profile into the correct subdirectory.  You can read how to change the name and more later in the documentation should you want to do so.
 
-7) Type `cd src/web/sites/default` and hit enter, then type `cp default.settings.php settings.php` to use the included standards php settings by renaming the default version.
+7) Type `cd src/web/sites/default` and hit enter, then type `cp default.settings.php settings.php` to use the included standard php settings by renaming the default version.
 
 8) Type `chmod 666 settings.php` to open the permissions to that file during the install process.  REMEMBER THAT YOU WILL WANT TO CHANGE THESE PERMISSIONS BACK TO A SECURE LEVEL IF YOU MOVE YOUR PROJECT TO A NON-LOCAL ENVIRONMENT.
 
