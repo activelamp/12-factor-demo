@@ -34,17 +34,31 @@ between local and GitHub, using branches and forking, there is about an hour and
 1) Pulling down the clone:
                               `git clone https://github.com/RightsandWrongsgit/12-factor-demo.git`
 
- *NOTE: this example syntax is NOT from a ‘Fork’, so you will want to change the ‘https:// …  ‘ part of it to use your own fork’s clone address.  
+ *NOTE: this example syntax is NOT from a ‘Fork’.  If you are just trying it out so see how Drupal works in a Docker container you can use that directly.  But if you anticipate working with and then version controlling it for your own site you will want to fork the GitHub repository and change the ‘https:// …  ‘ part of it to use your own fork’s clone address.  
 
 2) Now local, change into the working directory of what you cloned:    `cd 12-factor-demo`
 
-3) Run:    `Make Setup`
+3) Type `rm -rf src` on the command line and hit enter to remove the existing Drupal version in preparation of an update.
 
-4) Run:    `Make Start`
+4) Type 'mkdir src` on the command line and hit enter to make a new src (source) directory to install into.
 
-5) Go to your Browser address bar type and hit enter:    `localhost:7080`
+5) Type or copy/paste `composer create-project drupal/recommended-project:8.9.11 src` on the command line and hit enter to install a Drupal version into the src (source) directory you just created.  You may want to change the 8.9.11 part of that command with any version 8 that is MORE CURRENT if one is available that you want.
 
-6) Open Visual Studio Code and click the 'Source Control' icon where you will initialize your local Git repository (Or do it in your own favorite Git/IDE environment)
+6) Make sure you are in the Project level directory (12-factor-demo), then type or copy/paste `mv yoursite src/web/profiles` on the command line and hit enter to move the pre-established base profile into the correct subdirectory.  You can read how to change the name and more later in the documentation should you want to do so.
+
+7) Type `cd src/web/sites/default` and hit enter, then type `cp default.settings.php settings.php` to use the included standards php settings by renaming the default version.
+
+8) Type `chmod 666 settings.php` to open the permissions to that file during the install process.  REMEMBER THAT YOU WILL WANT TO CHANGE THESE PERMISSIONS BACK TO A SECURE LEVEL IF YOU MOVE YOUR PROJECT TO A NON-LOCAL ENVIRONMENT.
+
+9) Still in that "src/web/sites/default" subdirectory, type `mkdir files` to make an additional "files" subdirectory.  And then type `chmod 777 files` to give write permission during the install process.  AGAIN, REMEMBER TO TIGHTEN PERMISSIONS LATER FOR SECURITY. 
+
+10) Run:    `Make Setup`
+
+11) Run:    `Make Start`
+
+12) Go to your Browser address bar type and hit enter:    `localhost:7080`   (Or, if you are using Docker Dashboard, you can now go the running container and into the application). 
+
+13) If your are going to start working on customization of the Drupal site with an intent to save it, you probably should also Open Visual Studio Code and click the 'Source Control' icon where you will initialize your local Git repository (Or do it in your own favorite Git/IDE environment)
 
 --------------------------------------------------------------
 # WHAT'S GOING ON & ADDTIONAL STEPS TO TAKE THINGS FURTHER
