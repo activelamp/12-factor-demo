@@ -304,6 +304,23 @@ of your Bash file, open the terminal and it will have given you a dump that you 
 
 `set +x			# stop debugging from here`
 
+### Check Directory Existance -
+Drupal is pretty good at giving warnings during the installation process of not being able to find a directory or file.  Sometimes it is not clear if it didn't find a file because
+it isn't there at all or because it can't get to it.  So when you get a warning message start by using finder, explorer, or their counterparts to look over the directories and
+files.  If a directory simply isn't there, go to a subdirectory immediately over top of where the new directory you need and then type `mkdir newdirectoryname` and hit enter.
+
+### Check Directory and File Permissions -
+Most of the time a directory or file at least has 'read' permissions so you will be able to see into it; (Remember Cmd+Shft+period can be used to show hidden files on a Mac). But 
+keep in mind, that there are occassion especially during something like installing, which require permissions greater than just seeing and reading a file or inside a directory.
+The first thing you might want to check is to see exactly what the permission situation is on a file and you can type `ls -l directory/directory/directory/filename.fileextention`
+and hit enter to find out (if already in the directory where a file is located you don't need to string out the whole directory nest where it is, just do `filename.fileextention`)
+Commonly someone might want to grant wide access to a directory during installation and type `chmod 777 directoryname` and enter to do so; thus giving read, write, and execute
+permissions to 'self/group/everyone'.  You wouldn't want to leave it that way in a live website for security reasons so you would change it to a more appropriate designation then.
+You might do `chmod 644 filename` to grant read-write access to the owner(you) but only read access to your group and everyone else.  Or perhaps `chmod 664 filename` to grant
+read-write to you and to your group but just read access to everyone else.  If a file needs to be written to during the installation process you might `chmod 666 filename` to
+grant access of read-write to self/group/everyone for something like a settings.php file but you certainly want to lock permissions down for security reasons afterward.  For more
+on missions you might review (https://kb.iu.edu/d/abdb).
+
 ### Checking Git Configuration -
 Sometimes you might question where Git is pulling its information and it it is set up correctly.  To see where it is pulling from run
 
