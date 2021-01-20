@@ -36,7 +36,7 @@ between local and GitHub, using branches and forking, there is about an hour and
 
  *NOTE: this example syntax is NOT from a ‘Fork’.  If you are just trying it out so see how Drupal works in a Docker container you can use that directly.  But if you anticipate working with and then version controlling it for your own site you will want to fork the GitHub repository and change the ‘https:// …  ‘ part of it to use your own fork’s clone address.  
 
-2) Now local, change into the working directory of what you cloned:    `cd 12-factor-demo`
+2) Now on your local host machine, change into the working directory of what you cloned:    `cd 12-factor-demo`
 
 3) Type `rm -rf src` on the command line and hit enter to remove the existing Drupal version in preparation of an update.
 
