@@ -42,21 +42,27 @@ between local and GitHub, using branches and forking, there is about an hour and
 
 4) Type `mkdir src` on the command line and hit enter to make a new src (source) directory to install into.
 
-5) Type or copy/paste `composer create-project drupal/recommended-project:8.9.11 src` on the command line and hit enter to install a Drupal version into the src (source) directory you just created.  You may want to change the 8.9.11 part of that command with any version 8 that is MORE CURRENT if one is available that you want.
+5) Type or copy/paste `composer create-project drupal/recommended-project:8.9.11 src` on the command line and hit enter to install a Drupal version into the src (source) directory 
+you just created.  You may want to change the 8.9.11 part of that command with any version 8 that is MORE CURRENT if one is available that you want. Also, the preceeding is for a
+standard install of Drupal via Composer.  Some quick customization options are discussed in the next section of this documentation under the heading "The Composer.json file".
 
-6) Make sure you are in the Project level directory (12-factor-demo), then type or copy/paste `mv yoursite src/web/profiles` on the command line and hit enter to move the pre-established base profile into the correct subdirectory.  You can read how to change the name and more later in the documentation should you want to do so.
+6) Make sure you are in the Project level directory (12-factor-demo), then type or copy/paste `mv yoursite src/web/profiles` on the command line and hit enter to move the
+pre-established base profile into the correct subdirectory.  You can read how to change the name and more later in the documentation should you want to do so.
 
 7) Type `cd src/web/sites/default` and hit enter, then type `cp default.settings.php settings.php` to use the included standard php settings by renaming the default version.
 
-8) Type `chmod 666 settings.php` to open the permissions to that file during the install process.  REMEMBER THAT YOU WILL WANT TO CHANGE THESE PERMISSIONS BACK TO A SECURE LEVEL IF YOU MOVE YOUR PROJECT TO A NON-LOCAL ENVIRONMENT.
+8) Type `chmod 666 settings.php` to open the permissions to that file during the install process.  REMEMBER THAT YOU WILL WANT TO CHANGE THESE PERMISSIONS BACK TO A SECURE LEVEL
+IF YOU MOVE YOUR PROJECT TO A NON-LOCAL ENVIRONMENT.
 
-9) Still in that "src/web/sites/default" subdirectory, type `mkdir files` to make an additional "files" subdirectory.  And then type `chmod 777 files` to give write permission during the install process.  AGAIN, REMEMBER TO TIGHTEN PERMISSIONS LATER FOR SECURITY. 
+9) Still in that "src/web/sites/default" subdirectory, type `mkdir files` to make an additional "files" subdirectory.  And then type `chmod 777 files` to give write permission
+during the install process.  AGAIN, REMEMBER TO TIGHTEN PERMISSIONS LATER FOR SECURITY. 
 
 10) Run:    `Make Setup`
 
 11) Run:    `Make Start`
 
-12) Go to your Browser address bar type and hit enter:    `localhost:7080`   (Or, if you are using Docker Dashboard, you can now go to the running container and into the application). 
+12) Go to your Browser address bar type and hit enter:    `localhost:7080`   (Or, if you are using Docker Dashboard, you can now go to the running container and into the
+application). 
 
 13) If you are going to start working on customization of the Drupal site with an intent to save it, you probably should also Open Visual Studio Code and click the 'Source Control' icon where you will initialize your local Git repository (Or do it in your own favorite Git/IDE environment)
 
@@ -144,6 +150,8 @@ referencing from your local machine as -drupal-sync:/var/www:nocopy   You might 
 
 ## The Clean New Site Approach:
 
+### The Composer.json File
+
 #### Composer PHP Dependency Manager's Role
 Not to be confused with ‘docker-compose’ there is something called “Composer” that is a dependency manager for PHP.   Drupal is written in PHP, and Composer has been essential
 to working with Drupal since version 8.  Most people who have worked with Drupal are aware of Composer primarily as the thing that makes sure the “Modules” you add to the
@@ -152,6 +160,7 @@ aspects of Drupal as well for things like Twig in themes that make the site look
 its roles and value, just trust that you will be needing to use it now and a lot later on too.  You need to have Composer installed at this point to continue and you can find
 it at (https://getcomposer.org/download/)
 
+<img src="img/Composer_Json.png" width="300">
 
 To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find a good starting point.  It should take you to a
 GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
