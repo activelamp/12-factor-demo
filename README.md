@@ -155,10 +155,12 @@ referencing from your local machine as -drupal-sync:/var/www:nocopy   You might 
 #### Composer PHP Dependency Manager's Role
 Not to be confused with ‘docker-compose’ there is something called “Composer” that is a dependency manager for PHP.   Drupal is written in PHP, and Composer has been essential
 to working with Drupal since version 8.  Most people who have worked with Drupal are aware of Composer primarily as the thing that makes sure the “Modules” you add to the
-basic or core installation of Drupal all work in concert with one another; thus the picture of the orchestra conductor on the Composer website. PHP is inherent in some other
-aspects of Drupal as well for things like Twig in themes that make the site look attractive and the underlying Symphony component.  Right now you don't need to dive into all
-its roles and value, just trust that you will be needing to use it now and a lot later on too.  You need to have Composer installed at this point to continue and you can find
-it at (https://getcomposer.org/download/)
+basic or core installation of Drupal all work in concert with one another; thus the picture of the orchestra conductor on the Composer website.(https://getcomposer.org/download/)
+PHP is inherent in some other aspects of Drupal as well for things like Twig in themes that make the site look attractive and the underlying Symphony component.  Right now you 
+don't need to dive into all its roles and value, just trust that you will be needing to use it now and a lot later on too.  You need to have Composer installed at this point to 
+continue (see how toward the end of this documentation in a section called: "SETTING UP YOUR BASIC SYSTEM BEFORE YOU GET STARTED").
+
+Below you will see an image of a Composer.json file.  Don't study this one too hard because it is just provided to illustrate a few points before you dive in deeper.  The first thing to notice is the "name" and "description" and "type" which are common elements in virtually all you will see.  The "name" is important because it is what you would use to trigger the use of the file from the command line.  Very similar to what you saw in Quick Start step to install Drupal where we had something like 'composer create-project drupal/recommended-project:8.9.11 src'   
 
 <img src="img/Composer_Json.png" width="600">
 
