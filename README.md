@@ -162,15 +162,19 @@ continue (see how toward the end of this documentation in a section called: "SET
 
 Below you will see an image of a Composer.json file.  Don't study this one too hard because it is just provided to illustrate a few points before you dive in deeper.  The first
 thing to notice is the "name" and "description" and "type" which are common elements in virtually all you will see.  The "name" is important because it is what you would use to
-trigger the use of the file from the command line.  Very similar to what you saw in Quick Start step to install Drupal where we had something like 'composer create-project
-drupal/recommended-project:8.9.11 src'   ;hfads.
-
+trigger the use of the file from the command line.   In the Quick Start step to install Drupal you saw 'composer create-project drupal/recommended-project:8.9.11 src' and what
+that is saying is for Composer to create a project from the instructions in a file named 'drupal/recommended-project'.  The command further said to do the install with a specific
+version of Drupal and to put it all into the "src" directory we created to make a clean install into.
 
 <img src="img/Composer_json.png" width="700">
 
+Before we get away from reviewing this composer.json file, the other important thing you should note is that it has a statement "require: {"  (and another saying "require-dev: {)
+followed by a bunch of lines that name some specific Drupal components or elements that must be included in the installation you are making.  The example composer.jason file shown
+above is for a standard installation.  One of the strength of Drupal is its extaordinary flexiblity in terms of function and appearance through what are called "modules" and
+"themes", respectively.   To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find additional good starting points. 
+See if you find any other Drupal project composer.json files that others have created and review especially what they may have included in the "require: {" section of their files.
 
-To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find a good starting point.  It should take you to a
-GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
+
 
 Add - the key next thing to put in documentation is how you remove the docker-compose.yml installed .src directory and below, replacing it with an empty .src directory 
 in which you run the correct version of (https://github.com/drupal-composer/drupal-project/tree/8.x).  It is likely that this current repository should edit a branch and
