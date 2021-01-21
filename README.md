@@ -160,7 +160,7 @@ aspects of Drupal as well for things like Twig in themes that make the site look
 its roles and value, just trust that you will be needing to use it now and a lot later on too.  You need to have Composer installed at this point to continue and you can find
 it at (https://getcomposer.org/download/)
 
-<img src="img/Composer_Json.png" width="300">
+<img src="img/Composer_Json.png" width="600">
 
 To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find a good starting point.  It should take you to a
 GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
