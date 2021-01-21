@@ -162,7 +162,7 @@ continue (see how toward the end of this documentation in a section called: "SET
 
 Below you will see an image of a Composer.json file.  Don't study this one too hard because it is just provided to illustrate a few points before you dive in deeper.  The first thing to notice is the "name" and "description" and "type" which are common elements in virtually all you will see.  The "name" is important because it is what you would use to trigger the use of the file from the command line.  Very similar to what you saw in Quick Start step to install Drupal where we had something like 'composer create-project drupal/recommended-project:8.9.11 src'   
 
-<img src="img/Composer_Json.png" width="600">
+<img src="img/Composer_Json.png" width="700">
 
 To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find a good starting point.  It should take you to a
 GitHub - drupal-composer/drupal-project: Composer template for Drupal projects.
