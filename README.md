@@ -174,7 +174,20 @@ above is for a standard installation.  One of the strength of Drupal is its exta
 "themes", respectively.   To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find additional good starting points. 
 See if you find any other Drupal project composer.json files that others have created and review especially what they may have included in the "require: {" section of their files.
 
+#### Something Other Than a "Standard" Install
+The very first thing you must do if you want something more than the standard installation is to change the line the the "Quick Start" section that says 'composer create-project
+drupal/recommended-project:8.9.11 src' to say `composer create-project --no-install drupal/recommended-project:8.9.11 src`.  This puts everything you need onto the host computer
+but without trigging the installation itself.  That buys you the opportunity to now edit or move an alternative 'composer.json' file into the right location before triggering the
+actual install process and Docker container builds.  After you have the 'composer.json' file you want in place, then you will run `composer install'. You may want to take a look
+at the Drupal.org website for a more complete discussion of Using Composer to install and manage drupal (https://www.drupal.org/docs/develop/using-composer/using-composer-to-install-drupal-and-manage-dependencies).
 
+Add - create a folder on the github respository named 'composer_configurations' where you put a bunch of 'composer.json' alternative files as starting points to get people off the
+ground running for specific common types of sites.  Name them with intent so people know which to use and create one or more associated 'readme.txt' files with how to value.  At
+a minimum instructions on how to rename the specific use file to a functional file and move it to the correct location.  For example, `mv book.composer.json src/` followed by
+`cp book.composer.json composer.json` followed by `chmod 664 composer.json`.  Other starting intent sites might be 'forum.composer.json', 'location.composer.json', 
+'store.composer.json', etc.
+
+#### Is this the best place to introduce preparation of an existing site composer update, stop, cron, clear cache, and build its inbound home via its absolutely most current composer.json file in preparation for backup and migration?
 
 Add - the key next thing to put in documentation is how you remove the docker-compose.yml installed .src directory and below, replacing it with an empty .src directory 
 in which you run the correct version of (https://github.com/drupal-composer/drupal-project/tree/8.x).  It is likely that this current repository should edit a branch and
