@@ -166,7 +166,7 @@ trigger the use of the file from the command line.  Very similar to what you saw
 drupal/recommended-project:8.9.11 src'   ;hfads.
 
 
-<img src="img/Composer_Json.png" width="700">
+<img src="img/Composer_json.png" width="700">
 
 
 To make it easy by leveraging someone else’s good thinking, you can do a search for ‘composer template drupal’ to find a good starting point.  It should take you to a
