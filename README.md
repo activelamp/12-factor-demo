@@ -185,7 +185,10 @@ Add - create a folder on the github respository named 'composer_configurations' 
 ground running for specific common types of sites.  Name them with intent so people know which to use and create one or more associated 'readme.txt' files with how to value.  At
 a minimum instructions on how to rename the specific use file to a functional file and move it to the correct location.  For example, `mv book.composer.json src/` followed by
 `cp book.composer.json composer.json` followed by `chmod 664 composer.json`.  Other starting intent sites might be 'forum.composer.json', 'location.composer.json', 
-'store.composer.json', etc.
+'store.composer.json', etc.  Before building these out, confirm if that these should really be the 'composer.lock' files to assure tight control of dependencies and whether just 
+the 'lock' file needs to be used or both it and the 'json'.  https://getcomposer.org/doc/02-libraries.md  Also, see if the modules loaded by composer or in many cases included
+in the base Drupal install, must be enabled via Drush or if any alternatives might exist versus having to do it via the Admin Menu by the user.  And see if it is practical to
+move, permission, install, and enable the whole shot'n match with a Make Something set of commands I can just put in the existing Makefile with a set of sequential menu options.
 
 #### Is this the best place to introduce preparation of an existing site composer update, stop, cron, clear cache, and build its inbound home via its absolutely most current composer.json file in preparation for backup and migration?
 
